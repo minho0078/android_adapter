@@ -20,14 +20,21 @@
             android:paddingRight="10pt"
             android:gravity="center"
             android:background="@color/colorPrimary"
-            android:textColor="@color/colorAccent"/>
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/bm_hanna"
+            app:fontFamily="@font/bm_hanna"/>
+
         <TextView
             android:id="@+id/item_cardView_subTitle"
             android:layout_width="match_parent"
             android:layout_height="50pt"
             android:paddingLeft="10pt"
             android:paddingRight="10pt"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="test"
+            android:fontFamily="@font/bm_hanna"
+            app:fontFamily="@font/bm_hanna"/>
+
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

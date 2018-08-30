@@ -2,6 +2,9 @@ package com.minho.playground;
 
 import android.content.ClipData;
 import android.content.Context;
+import android.graphics.Typeface;
+import android.support.annotation.NonNull;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.Layout;
 import android.view.LayoutInflater;
@@ -16,11 +19,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
     private Context context;
     private ArrayList<ItemModel> itemList;
     private int layout;
+    private Typeface typeface;
 
     public RecyclerAdapter(Context context, int layout, ArrayList<ItemModel> itemList){
         this.context = context;
         this.itemList = itemList;
         this.layout = layout;
+
+        this.typeface = ResourcesCompat.getFont(context, R.font.bm_hanna);
     }
 
     @Override
@@ -30,10 +36,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ItemModel itemModel = itemList.get(position);
+
         holder.title.setText(itemModel.getTitle());
+        holder.title.setTypeface(typeface);
+
         holder.subTitle.setText(itemModel.getSubTitle());
+        holder.subTitle.setTypeface(typeface);
     }
 
     @Override

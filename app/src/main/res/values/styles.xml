@@ -6,6 +6,19 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="cardViewStyle">@style/CardView</item>
+
+        <item name="android:textViewStyle">@style/CustomTextView</item>
+        <item name="android:actionBarStyle">@style/CustomActionBar</item>
+
+    </style>
+
+    <style name="CustomTextView" parent="@android:style/Widget.DeviceDefault.TextView">
+        <item name="android:fontFamily">@font/bm_hanna</item>
+    </style>
+
+    <style name="CustomActionBar" parent="@android:style/Widget.DeviceDefault.ActionBar">
+        <item name="android:fontFamily">@font/bm_hanna</item>
     </style>
 
 </resources>
